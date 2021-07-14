@@ -24,13 +24,13 @@ public class MainPage {
 
 
     public MainPage(WebDriver webDriver){
-        System.out.println("**********************");
+        //System.out.println("**********************");
         PageFactory.initElements(webDriver, this);
         seleniumImplementation = new SeleniumImplementation();
     }
 
     public boolean validateEmailAdress(WebDriver webDriver){
-        System.out.println("******************************* Ingresar al Metodo ********************************");
+        //System.out.println("******************************* Ingresar al Metodo ********************************");
         //System.out.println("btnSeleccionarOpcion"+ btnSeleccionarOpcion.getTagName());
         seleniumImplementation.click(btnSeleccionarOpcion);
         return (seleniumImplementation.validateTextIntoText(webDriver, txtSeleccionado, "michael.lawson@reqres.in"));

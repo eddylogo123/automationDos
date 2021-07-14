@@ -48,8 +48,8 @@ public class SeleniumImplementation {
 
     public boolean validateText(WebDriver driver, WebElement element, String expectedText){
         String observedText = element.getText();
-        System.out.println("observedText"+observedText);
-        System.out.println("expectedText"+expectedText);
+        //System.out.println("observedText"+observedText);
+        //System.out.println("expectedText"+expectedText);
         if(observedText.equals(expectedText)){
             return true;
         }
@@ -59,8 +59,8 @@ public class SeleniumImplementation {
 
     public boolean validateTextIntoText(WebDriver driver, WebElement element, String expectedText){
         String observedText = element.getText();
-        System.out.println("observedText"+observedText);
-        System.out.println("expectedText"+expectedText);
+        //System.out.println("observedText"+observedText);
+        //System.out.println("expectedText"+expectedText);
         if(observedText.contains(expectedText)){
             return true;
         }

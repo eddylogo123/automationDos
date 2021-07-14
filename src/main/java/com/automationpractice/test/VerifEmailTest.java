@@ -1,5 +1,6 @@
 package com.automationpractice.test;
 
+import com.automationpractice.pages.MainPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -7,26 +8,25 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class VerifEmailTest {
-    WebDriver driver;
+
+    WebDriver webDriver;
+    MainPage mainPage;
 
     //AddToCartPage page;
 
     @BeforeTest
     public void setup(){
         System.setProperty("webdriver.chrome.driver","chromedriver");
-        driver = new ChromeDriver();
-        driver.get("https://reqres.in/");
-        driver.manage().window().maximize();
-
-        //*[@id="console"]/div[2]/div[1]/p/strong/a/span
-        //page = new AddToCartPage(driver);
-
+        webDriver = new ChromeDriver();
+        webDriver.get("https://reqres.in/");
+        webDriver.manage().window().maximize();
+        mainPage = new MainPage(webDriver);
     }
 
     @Test
     public void validateAddoCart(){
         System.out.println("Saludos");
-        //Assert.assertTrue(page.validateAddToCart(driver));
+        Assert.assertTrue(mainPage.validateEmailAdress(webDriver));
     }
 
 }

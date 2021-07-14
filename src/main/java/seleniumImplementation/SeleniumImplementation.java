@@ -56,4 +56,15 @@ public class SeleniumImplementation {
         return false;
     }
 
+
+    public boolean validateTextIntoText(WebDriver driver, WebElement element, String expectedText){
+        String observedText = element.getText();
+        System.out.println("observedText"+observedText);
+        System.out.println("expectedText"+expectedText);
+        if(observedText.contains(expectedText)){
+            return true;
+        }
+        return false;
+    }
+
 }
